@@ -9,7 +9,7 @@ EOF<-function(Mx,scl=FALSE){
   return(out)
 }
 
-## 
+## Calculates the threashold values for a Rule N test based on the dimensions of the data matrix (Mx), number of itarations (iter), and confidence value (alpha)
 RuleN<-function(Mx,iter,alph){
   simulatedEig<-as.data.frame(replicate(dim(Mx)[2],rnorm(iter)))
   simulatedExp<-as.data.frame(replicate(dim(Mx)[2],rnorm(iter)))
